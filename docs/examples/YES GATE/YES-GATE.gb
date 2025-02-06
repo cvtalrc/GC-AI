@@ -1,0 +1,68 @@
+LOCUS       BBa_0000                2442 bp    DNA     linear   UNK 01-JAN-1980
+DEFINITION  YES GATE circuit test.
+ACCESSION   BBa_0000
+VERSION     BBa_0000
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+     misc_feature    1..35
+                     /label="BBa_J23100_1"
+     misc_feature    44..55
+                     /label="BBa_B0034_1"
+     misc_feature    62..1214
+                     /label="BBa_C0012_1"
+     misc_feature    1223..1351
+                     /label="BBa_B0015_1"
+     misc_feature    1360..1559
+                     /label="BBa_R0010_1"
+     misc_feature    1568..1579
+                     /label="BBa_B0034_2"
+     misc_feature    1586..2305
+                     /label="BBa_E0040_1"
+     misc_feature    2314..2442
+                     /label="BBa_B0015_2"
+ORIGIN
+        1 ttgacggcta gctcagtcct aggtacagtg ctagctacta gagaaagagg agaaatacta
+       61 gatggtgaat gtgaaaccag taacgttata cgatgtcgca gagtatgccg gtgtctctta
+      121 tcagaccgtt tcccgcgtgg tgaaccaggc cagccacgtt tctgcgaaaa cgcgggaaaa
+      181 agtggaagcg gcgatggcgg agctgaatta cattcccaac cgcgtggcac aacaactggc
+      241 gggcaaacag tcgttgctga ttggcgttgc cacctccagt ctggccctgc acgcgccgtc
+      301 gcaaattgtc gcggcgatta aatctcgcgc cgatcaactg ggtgccagcg tggtggtgtc
+      361 gatggtagaa cgaagcggcg tcgaagcctg taaagcggcg gtgcacaatc ttctcgcgca
+      421 acgcgtcagt gggctgatca ttaactatcc gctggatgac caggatgcca ttgctgtgga
+      481 agctgcctgc actaatgttc cggcgttatt tcttgatgtc tctgaccaga cacccatcaa
+      541 cagtattatt ttctcccatg aagacggtac gcgactgggc gtggagcatc tggtcgcatt
+      601 gggtcaccag caaatcgcgc tgttagcggg cccattaagt tctgtctcgg cgcgtctgcg
+      661 tctggctggc tggcataaat atctcactcg caatcaaatt cagccgatag cggaacggga
+      721 aggcgactgg agtgccatgt ccggttttca acaaaccatg caaatgctga atgagggcat
+      781 cgttcccact gcgatgctgg ttgccaacga tcagatggcg ctgggcgcaa tgcgcgccat
+      841 taccgagtcc gggctgcgcg ttggtgcgga tatctcggta gtgggatacg acgataccga
+      901 agacagctca tgttatatcc cgccgttaac caccatcaaa caggattttc gcctgctggg
+      961 gcaaaccagc gtggaccgct tgctgcaact ctctcagggc caggcggtga agggcaatca
+     1021 gctgttgccc gtctcactgg tgaaaagaaa aaccaccctg gcgcccaata cgcaaaccgc
+     1081 ctctccccgc gcgttggccg attcattaat gcagctggca cgacaggttt cccgactgga
+     1141 aagcgggcag gctgcaaacg acgaaaacta cgctttagta gcttaataac tctgatagtg
+     1201 ctagtgtaga tctctactag agccaggcat caaataaaac gaaaggctca gtcgaaagac
+     1261 tgggcctttc gttttatctg ttgtttgtcg gtgaacgctc tctactagag tcacactggc
+     1321 tcaccttcgg gtgggccttt ctgcgtttat atactagagc aatacgcaaa ccgcctctcc
+     1381 ccgcgcgttg gccgattcat taatgcagct ggcacgacag gtttcccgac tggaaagcgg
+     1441 gcagtgagcg caacgcaatt aatgtgagtt agctcactca ttaggcaccc caggctttac
+     1501 actttatgct tccggctcgt atgttgtgtg gaattgtgag cggataacaa tttcacacat
+     1561 actagagaaa gaggagaaat actagatgcg taaaggagaa gaacttttca ctggagttgt
+     1621 cccaattctt gttgaattag atggtgatgt taatgggcac aaattttctg tcagtggaga
+     1681 gggtgaaggt gatgcaacat acggaaaact tacccttaaa tttatttgca ctactggaaa
+     1741 actacctgtt ccatggccaa cacttgtcac tactttcggt tatggtgttc aatgctttgc
+     1801 gagataccca gatcatatga aacagcatga ctttttcaag agtgccatgc ccgaaggtta
+     1861 tgtacaggaa agaactatat ttttcaaaga tgacgggaac tacaagacac gtgctgaagt
+     1921 caagtttgaa ggtgataccc ttgttaatag aatcgagtta aaaggtattg attttaaaga
+     1981 agatggaaac attcttggac acaaattgga atacaactat aactcacaca atgtatacat
+     2041 catggcagac aaacaaaaga atggaatcaa agttaacttc aaaattagac acaacattga
+     2101 agatggaagc gttcaactag cagaccatta tcaacaaaat actccaattg gcgatggccc
+     2161 tgtcctttta ccagacaacc attacctgtc cacacaatct gccctttcga aagatcccaa
+     2221 cgaaaagaga gaccacatgg tccttcttga gtttgtaaca gctgctggga ttacacatgg
+     2281 catggatgaa ctatacaaat aataatacta gagccaggca tcaaataaaa cgaaaggctc
+     2341 agtcgaaaga ctgggccttt cgttttatct gttgtttgtc ggtgaacgct ctctactaga
+     2401 gtcacactgg ctcaccttcg ggtgggcctt tctgcgttta ta
+//

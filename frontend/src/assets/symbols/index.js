@@ -1,0 +1,13 @@
+export { default as promoter } from './promoter.svg';
+export { default as rbs } from './ribosome-entry-site.svg';
+export { default as cds } from './cds.svg';
+export { default as terminator } from './terminator.svg';
+export { default as engineeredRegion } from './engineered-region.svg';
+export { default as primerBindingSite } from './primer-binding-site.svg';
+export { default as operator } from './operator.svg';
+export { default as originOfTransfer } from './origin-of-transfer.svg';
+export { default as aptamer } from './aptamer.svg';
+export { default as inertDNASpacer } from './inert-dna-spacer.svg';
+export { default as ncrna } from './ncrna.svg';
+export { default as polyA } from './polyA.svg';
+export { default as originOfReplication } from './origin-of-replication.svg';

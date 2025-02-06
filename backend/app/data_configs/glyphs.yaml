@@ -1,0 +1,28 @@
+TRAIN_DIR_IMAGES: 'data/glyphs/dataset/train'
+TRAIN_DIR_LABELS: 'data/glyphs/dataset/train'
+VALID_DIR_IMAGES: 'data/glyphs/dataset/test'
+VALID_DIR_LABELS: 'data/glyphs/dataset/test'
+
+# Class names.
+CLASSES: [
+    '__background__',
+    'aptamer',
+    'cds',
+    'cds-arrow',
+    'engineered-region',
+    'inert-dna-spacer',
+    'ncrna',
+    'operator',
+    'origin-of-replication',
+    'origin-of-transfer',
+    'polyA',
+    'primer-binding-site',
+    'promoter',
+    'ribosome-entry-site',
+    'terminator',
+]
+
+# Number of classes (object classes + 1 for background class in Faster RCNN).
+NC: 15
+
+SAVE_VALID_PREDICTION_IMAGES: True
