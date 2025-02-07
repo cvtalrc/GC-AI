@@ -315,7 +315,6 @@ export default function Home() {
                 setErrors={setErrors}
                 setInteractions={setInteractions}
                 updatePredictions={updatePredictions}
-                namesCache={namesCache}
                 showModal={showModal}
                 API_BASE_URL={API_BASE_URL}
               />
@@ -330,14 +329,13 @@ export default function Home() {
                 setErrors={setErrors}
                 setInteractions={setInteractions}
                 updatePredictions={updatePredictions}
-                namesCache={namesCache}
                 showModal={showModal}
                 API_BASE_URL={API_BASE_URL}
               />
               </>
           )}
 
-          {!loading && prediction && imageElement && (
+          {!loading && prediction && imageElement && Object.keys(namesCache).length > 0 && (
             <>
               <ImageDisplay
                 imageElement={imageElement}

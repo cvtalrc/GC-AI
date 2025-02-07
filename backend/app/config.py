@@ -8,8 +8,8 @@ from app.utils.custom_error import CustomError
 from dotenv import load_dotenv
 
 # Cargar variables .env
-# load_dotenv()
-load_dotenv(dotenv_path=os.path.join(os.path.dirname(__file__), '../../', '.env'))
+load_dotenv()
+
 # Raíz del proyecto
 BASE_PATH = os.path.dirname(os.path.abspath(__file__))  
 

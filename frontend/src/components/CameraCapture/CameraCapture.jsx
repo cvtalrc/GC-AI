@@ -4,9 +4,11 @@ import { Button, Box, IconButton } from '@mui/material';
 import CenterFocusStrongIcon from '@mui/icons-material/CenterFocusStrong';
 import CameraAltIcon from '@mui/icons-material/CameraAlt';
 import CancelIcon from '@mui/icons-material/Cancel';
-import { useRef, useState } from 'react';
+import { useContext, useRef, useState } from 'react';
+import NameContext from '../../context/NameContext';
 
-export default function CameraCapture({API_BASE_URL, setLoading, setImageElement, stream, setStream, setHasPredictions, setPrediction, setNamespace, setExpressions, setEds, setInteractions, setErrors,updatePredictions, namesCache, showModal}) {
+export default function CameraCapture({API_BASE_URL, setLoading, setImageElement, stream, setStream, setHasPredictions, setPrediction, setNamespace, setExpressions, setEds, setInteractions, setErrors,updatePredictions, showModal}) {
+  const { namesCache } = useContext(NameContext);
   const [isCameraOpen, setIsCameraOpen] = useState(false);
   const videoRef = useRef(null);
   const canvasRef = useRef(null);
@@ -60,6 +62,7 @@ export default function CameraCapture({API_BASE_URL, setLoading, setImageElement
           img.src = base64Image;
 
           setPrediction(updatePredictions(res, namesCache));
+
           setNamespace("")
           setExpressions([])
           setEds([])

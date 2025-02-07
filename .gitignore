@@ -1,3 +1,5 @@
 .env
 .pth
 *.pth
+Dockerfile
+docker-compose.yml

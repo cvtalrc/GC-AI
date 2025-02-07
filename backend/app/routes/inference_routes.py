@@ -49,7 +49,6 @@ def inference():
       })
 
     logger.info(f"Returning {len(draw_boxes)} predictions")
-    logger.error("TEST ERROR")
     return jsonify({
       'status': 'success',
       'result_image': img_base64,

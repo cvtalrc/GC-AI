@@ -1,6 +1,6 @@
 # GC-AI
 
-**GC-AI** is a web application designed for symbol detection and SBOL3 file generation. The backend provides APIs for image processing, file generation, and data interaction.
+**GC-AI** is a web application designed for symbol detection and SBOL3 file generation.
 
 ## Table of Contents
 
@@ -25,94 +25,15 @@
 
 ---
 
-## Installation with Docker
+## Installation 
 
-This project uses Docker to create a development environment that includes three services: **Backend**, **Frontend**, and **Database (MySQL)**. We use Docker Compose to orchestrate the containers.
+The installation and setup of this application for local use are provided in the following repository:
 
-## Prerequisites
+[GC-AI Environment](https://github.com/cvtalrc/GC-AI-environment)
 
-Before you begin, ensure that you have the following programs installed on your machine:
+Please refer to that repository for detailed instructions on setting up and running the application.
 
-- [Docker](https://www.docker.com/products/docker-desktop) (and Docker Compose)
-- [Git](https://git-scm.com/)
-
-## Installation
-
-Follow these steps to install and run the project locally:
-
-### 1. **Clone the repository:**
-
-   First, clone the repository to your local machine:
-
-   ```bash
-   git clone <https://github.com/cvtalrc/GG-AI.git>
-   cd <GG-AI>
-   ```
-
-### 2. **Configure the `.env` file:**
-
-   The project uses a `.env` file to store the environment variables needed for the database and the application. Create a `.env` file at the root of the project and configure the following variables:
-
-   ```bash
-   touch .env
-   ```
-
-   Edit the `.env` file with the appropriate values:
-
-   ```env
-   # Database
-   DB_HOST=mysql_db
-   DB_USER=youruser
-   DB_PASSWORD=yourpassword
-   DB_NAME=iGEM2024
-   DB_PORT=3306
-
-   # Application
-   APP_HOST='0.0.0.0'
-   APP_PORT=5000
-
-   # Vite base URL
-   VITE_API_BASE_URL=http://localhost:5000
-   ```
-
-### 3. **Build the Docker containers:**
-
-   Next, build the containers using Docker Compose:
-
-   ```bash
-   docker-compose build
-   ```
-
-   This command will download the required images and build the containers for the backend, frontend, and database.
-
-### 4. **Start the services:**
-
-   Once the containers are built, you can start the services with the following command:
-
-   ```bash
-   docker-compose up
-   ```
-
-   This command will start the Docker containers and the services defined in the `docker-compose.yml` file. The services will be available on the following ports:
-
-   - **Backend**: `http://localhost:5000`
-   - **Frontend**: `http://localhost:80`
-
-   The MySQL database will be accessible through the `mysql_db` container on port `3307`.
-
-### 5. **Access the application:**
-
-   Once the containers are up and running, you can access the application at the following links:
-
-   - **Frontend**: `http://localhost:80`
-   - **Backend**: `http://localhost:5000`
-
-   The MySQL database can be accessed through the container or using tools like `MySQL Workbench`, configuring the connection with:
-
-   - **Host**: `localhost`
-   - **Port**: `3307`
-   - **User**: <DB_USER> (as defined in .env)
-   - **Password**: <DB_PASSWORD> (as defined in .env)
+---
 
 ## API Endpoints
 
@@ -194,3 +115,6 @@ For a detailed API reference, user guide, and additional resources, visit the `d
 ## License
 
 This project is licensed under the MIT License. See the `LICENSE` file for details.
+
+
+

@@ -11,6 +11,7 @@ const PredictionAccordion = ({ item, index, setPrediction, prediction, helperTex
     const [checkedAddComponent, setCheckedAddComponent] = useState(false);
     const prevNamesCache = useRef(namesCache);
     const prevItemRole = useRef(item.role);
+    // console.log(item.availableNames)
     
     useEffect(() => {
         if (!item.role) return;
@@ -26,7 +27,13 @@ const PredictionAccordion = ({ item, index, setPrediction, prediction, helperTex
         prevNamesCache.current = { ...namesCache }; 
         prevItemRole.current = item.role;
     }, [namesCache, item.role]);
-    
+
+    // if(item.availableNames.length === 0){
+    //     // console.log("availableNames..")
+    //     const newData = [...prediction];
+    //     newData[index] = { ...newData[index], availableNames: namesCache[item.role] || [], name: '' };
+    //     setPrediction(newData);
+    // }
 
     const handleRoleChange = (event, newValue) => {
         const newData = [...prediction];
