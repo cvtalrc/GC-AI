@@ -5,8 +5,8 @@ export const validateNamespace = (namespace) => {
 
   try {
     const url = new URL(namespace);
-    if (!url.href.endsWith("/") && !url.href.endsWith("#")) {
-      return "'Namespace' must start with http or https and end with / or #";
+    if (!url.href.startsWith("http://") && !url.href.startsWith("https://")) {
+      return "'Namespace' must start with http or https";
     }
   } catch {
     return "'Namespace' must be a valid URL starting with http or https";
@@ -27,8 +27,8 @@ export const validateComponent = (component) => {
   } else {
     try {
       const url = new URL(component.uri);
-      if (!url.href.endsWith("/") && !url.href.endsWith("#")) {
-        componentErrors.uri = "'URI' must start with http or https and end with / or #";
+      if (!url.href.startsWith("http://") && !url.href.startsWith("https://")) {
+        componentErrors.uri = "'URI' must start with http or https";
       }
     } catch {
       componentErrors.uri = "'URI' must be a valid URL starting with http or https";
@@ -189,8 +189,8 @@ export const validateEds = (eds) => {
     if (ed.uri?.trim()) {
       try {
         const url = new URL(ed.uri);
-        if (!url.href.endsWith("/") && !url.href.endsWith("#")) {
-          edErrors.uri = "'URI' must start with http or https and end with / or #";
+        if (!url.href.startsWith("http://") && !url.href.startsWith("https://")) {
+          edErrors.uri = "'URI' must start with http or https";
         }
       } catch {
         edErrors.uri = "'URI' must be a valid URL starting with http or https";

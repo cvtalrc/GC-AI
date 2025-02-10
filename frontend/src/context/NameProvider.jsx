@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import { useState, useEffect, useMemo } from 'react';
 import NameContext from './NameContext';
@@ -6,7 +5,7 @@ import NameContext from './NameContext';
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
 const NameProvider = ({ children }) => {
-    const [namesCache, setNamesCache] = useState({});
+    const [namesCache, setNamesCache] = useState(null); 
     const roles = useMemo(() => [
         'Aptamer-RNA', 'Aptamer-DNA', 'Inert-DNA-Spacer', 'Ncrna', 'PolyA-Site', 
         'Promoter', 'CDS', 'RBS', 'Operator',
@@ -28,14 +27,19 @@ const NameProvider = ({ children }) => {
                     return acc;
                 }, {});
 
-                setNamesCache(newCache);
+                setNamesCache(newCache); 
             } catch (error) {
                 console.error('Error fetching names:', error);
+                setNamesCache({}); 
             }
         };
 
         fetchAllNames();
     }, [roles]); 
+
+    if (!namesCache || Object.keys(namesCache).length === 0) {
+        return null;
+    }
 
     return (
         <NameContext.Provider value={{ namesCache, roles }}>

@@ -1,10 +1,10 @@
 /* eslint-disable react/prop-types */
-// import { useContext } from "react";
+
 import { Button } from "@mui/material";
 import ImageIcon from "@mui/icons-material/Image";
 import { useContext } from "react";
 import NameContext from "../../context/NameContext";
-// import NameContext from "../../context/NameContext";
+
 
 export default function FileUpload({ setLoading, setHasPredictions, setImageElement, setPrediction, setNamespace, setExpressions, setEds, setInteractions, setErrors, updatePredictions, API_BASE_URL, showModal, }) {
   const { namesCache } = useContext(NameContext);
