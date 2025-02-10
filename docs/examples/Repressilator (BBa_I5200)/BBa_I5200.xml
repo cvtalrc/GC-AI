@@ -192,7 +192,7 @@
     <sbol:name>LacI</sbol:name>
     <rdf:type rdf:resource="http://sbols.org/v3#ExternallyDefined"/>
     <sbol:type rdf:resource="https://identifiers.org/SBO:0000252"/>
-    <sbol:definition rdf:resource="https://www.uniprot.org/uniprotkb/P03023/entry/"/>
+    <sbol:definition rdf:resource="https://www.uniprot.org/uniprotkb/P03023/entry"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://parts.igem.org/BBa_I5200/SubComponent2">
     <sbol:displayId>SubComponent2</sbol:displayId>
@@ -640,7 +640,7 @@ Contact info for this part: &lt;a href="mailto:(bchow@media.mit.edu)"&gt;Brian C
     <sbol:name>cI</sbol:name>
     <rdf:type rdf:resource="http://sbols.org/v3#ExternallyDefined"/>
     <sbol:type rdf:resource="https://identifiers.org/SBO:0000252"/>
-    <sbol:definition rdf:resource="https://www.uniprot.org/uniprotkb/P03034/entry/"/>
+    <sbol:definition rdf:resource="https://www.uniprot.org/uniprotkb/P03034/entry"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://parts.igem.org/BBa_I5200_system/ComponentReference14">
     <sbol:displayId>ComponentReference14</sbol:displayId>
@@ -957,7 +957,7 @@ Contact info for this part: &lt;a href="mailto:(bchow@media.mit.edu)"&gt;Brian C
     <sbol:name>TetR</sbol:name>
     <rdf:type rdf:resource="http://sbols.org/v3#ExternallyDefined"/>
     <sbol:type rdf:resource="https://identifiers.org/SBO:0000252"/>
-    <sbol:definition rdf:resource="https://www.uniprot.org/uniprotkb/P04483/entry/"/>
+    <sbol:definition rdf:resource="https://www.uniprot.org/uniprotkb/P04483/entry"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://parts.igem.org/BBa_I5200/Constraint4">
     <sbol:displayId>Constraint4</sbol:displayId>
