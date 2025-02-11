@@ -4,14 +4,14 @@
 
 ## 📖 Table of Contents
 
-- 🔹 [Features](#features)
-- 🔹 [Requirements](#requirements)
-- 🔹 [Installation](#installation)
-- 🔹 [Usage](#usage)
-- 🔹 [API Endpoints](#api-endpoints)
-- 🔹 [Project Structure](#project-structure)
-- 🔹 [Documentation](#documentation)
-- 🔹 [License](#license)
+-  [Features](#features)
+-  [Requirements](#requirements)
+-  [Installation](#installation)
+-  [Usage](#usage)
+-  [API Endpoints](#api-endpoints)
+-  [Project Structure](#project-structure)
+-  [Documentation](#documentation)
+-  [License](#license)
 
 ---
 
