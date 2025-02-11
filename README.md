@@ -17,11 +17,11 @@
 
 ## 🖥️ Features
 
-✅ **Symbol Detection**: Leverages a trained ML model to identify and classify symbols in input images.
-✅ **SBOL3 File Generation**: Creates SBOL3 files based on user input and system rules.
-✅ **File Conversion**: Converts SBOL3 files to GenBank and/or FASTA formats.
-✅ **Health Check**: Provides an endpoint to verify the application's health.
-✅ **Database Integration**: Interacts with a MySQL database to retrieve and store relevant data.
+- ✅ **Symbol Detection**: Leverages a trained ML model to identify and classify symbols in input images.
+- ✅ **SBOL3 File Generation**: Creates SBOL3 files based on user input and system rules.
+- ✅ **File Conversion**: Converts SBOL3 files to GenBank and/or FASTA formats.
+- ✅ **Health Check**: Provides an endpoint to verify the application's health.
+- ✅ **Database Integration**: Interacts with a MySQL database to retrieve and store relevant data.
 
 ---
 
@@ -107,10 +107,10 @@ Please refer to that repository for detailed instructions on setting up and runn
 
 For a detailed API reference, user guide, and additional resources, visit the `docs` folder in this repository. This folder includes:
 
-📖 **API Documentation:** Detailed explanations of each endpoint, including parameters, request examples, and responses.
-📝 **User Guide:** Step-by-step instructions on how to use the application.
-📁 **Examples Folder:** Contains example files and use cases to better understand the functionality.
-🎥 **Video Tutorial:** A video walkthrough demonstrating the application's workflow and features.
+- 📖 **API Documentation:** Detailed explanations of each endpoint, including parameters, request examples, and responses.
+- 📝 **User Guide:** Step-by-step instructions on how to use the application.
+- 📁 **Examples Folder:** Contains example files and use cases to better understand the functionality.
+- 🎥 **Video Tutorial:** A video walkthrough demonstrating the application's workflow and features.
 
 ## 📝 License
 
