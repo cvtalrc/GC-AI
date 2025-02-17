@@ -17,13 +17,11 @@ def healthcheck():
   logger.info("Healthcheck endpoint called")
   
   try:
-    # Test model
     if model is None:
       logger.error("Healthcheck failed: Model not loaded")
       raise CustomError("Model not loaded", 500)
     logger.info("Model is loaded successfully")
 
-    # Test database connection
     connection = get_db_connection()
     try:
       with connection.cursor() as cursor:

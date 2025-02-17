@@ -21,34 +21,29 @@ def create_app():
   app.register_blueprint(healthcheck_blueprint, url_prefix='/healthcheck')
   app.register_blueprint(component_blueprint, url_prefix='/component')
   
-  # Configurar logger raíz
   logging.basicConfig(
-    level=logging.DEBUG,  # Asegurar que los logs debug se impriman
+    level=logging.DEBUG, 
     format="%(asctime)s - %(levelname)s - %(message)s",
-    handlers=[logging.StreamHandler(sys.stdout)]  # Asegurar salida en consola
+    handlers=[logging.StreamHandler(sys.stdout)] 
   )
 
-  # Agregar StreamHandler a la consola
-  console_handler = logging.StreamHandler(sys.stdout)  # ← Usar stdout en lugar de default
-  console_handler.setLevel(logging.DEBUG)  # Mostrar todo en consola
+  console_handler = logging.StreamHandler(sys.stdout) 
+  console_handler.setLevel(logging.DEBUG)
   console_formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
   console_handler.setFormatter(console_formatter)
   app.logger.addHandler(console_handler)
-  
-  # Configuración para archivo
+ 
   file_handler = RotatingFileHandler('gc-ai-backend.log', maxBytes=10 * 1024 * 1024, backupCount=5)  
   file_handler.setLevel(logging.WARNING) 
   file_formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
   file_handler.setFormatter(file_formatter)
   app.logger.addHandler(file_handler)
 
-  
-  # Manejo global de errores
   def handle_general_exception(e):
     """
     Global error handler to catch all exceptions and return a JSON response.
     """
-    status_code = 500  # Internal server error
+    status_code = 500 
     if isinstance(e, HTTPException):
       status_code = e.code
       message = e.description

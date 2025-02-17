@@ -23,8 +23,8 @@ def inference_annotations(outputs, classes, colors, orig_image):
 	draw_boxes = boxes.astype(np.int32)
 	pred_classes = [classes[i] for i in labels]
 
-	lw = max(round(sum(orig_image.shape) / 2 * 0.003), 2)  # Grosor de línea
-	tf = max(lw - 1, 1)  # Grosor de fuente
+	lw = max(round(sum(orig_image.shape) / 2 * 0.003), 2) 
+	tf = max(lw - 1, 1) 
 
 	for j, box in enumerate(draw_boxes):
 		p1, p2 = (int(box[0]), int(box[1])), (int(box[2]), int(box[3]))

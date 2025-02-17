@@ -9,16 +9,14 @@ def promoter_constitutive(target: Union[sbol3.Feature, sbol3.Component], system:
   :param system: optional explicit statement of system
   :return: newly created constitutive promoter
   """
-  # transform implicit arguments into explicit
+
   system = ensure_singleton_system(system, target)
   target = ensure_singleton_feature(system, target)
 
-  # create a constitutive promoter and use it to regulate the target
   local = sbol3.LocalSubComponent([sbol3.SBO_DNA], roles=['https://identifiers.org/SO:0002050'])
   promoter_component = add_feature(system, local)
   regulate(promoter_component, target)
 
-  # also add the promoter into any containers that hold the target
   # TODO: add lookups for constraints like we have for interactions
   containers = [c.subject for c in system.constraints
                 if c.restriction == sbol3.SBOL_CONTAINS and c.object == target.identity]

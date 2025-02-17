@@ -3,7 +3,7 @@ from app.utils.cleanup import start_cleanup_schedule
 from dotenv import load_dotenv
 import os
 
-load_dotenv()
+#load_dotenv()
 
 def main():
     

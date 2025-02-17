@@ -4,7 +4,7 @@ import { Box, Typography, IconButton, Accordion, AccordionSummary, AccordionDeta
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 import ExpressionComponent from '../../components/Expression/ExpressionComponent';
 import Interaction from '../Expression/Interaction';
-import ExternallyDefined from '../Expression/ExternallyDefinited';
+import ExternallyDefined from '../Expression/ExternallyDefined';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 export default function FunctionalSystem({ expressions, setExpressions, interactions, setInteractions, eds, setEds, prediction, error, helperText, participantRoles, setErrors, setParticipantRoles, setErrorBack, API_BASE_URL, showModal}) {
@@ -77,7 +77,7 @@ export default function FunctionalSystem({ expressions, setExpressions, interact
       {expressions.length > 0 ? (
         <>
          <Box sx={{ display: 'flex', flexDirection: 'row'}}>
-            <Typography sx={{ mt: .5}}>Externally Definited</Typography>
+            <Typography sx={{ mt: .5}}>Externally Defined</Typography>
             <IconButton
               onClick={handleAddEd}
               color="primary"
@@ -96,7 +96,7 @@ export default function FunctionalSystem({ expressions, setExpressions, interact
                   aria-controls={`panel${edIndex}-content`}
                   id={`panel${edIndex}-header`}
                 >
-                  <Typography>Externally Definited {eds && eds[edIndex].name ? `(${eds[edIndex].name})` : ''}</Typography>
+                  <Typography>Externally Defined {eds && eds[edIndex].name ? `(${eds[edIndex].name})` : ''}</Typography>
                 </AccordionSummary>
                 <AccordionDetails>
                   <ExternallyDefined

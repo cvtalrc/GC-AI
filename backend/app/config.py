@@ -7,19 +7,15 @@ from app.models.create_fasterrcnn_model import create_model
 from app.utils.custom_error import CustomError
 from dotenv import load_dotenv
 
-# Cargar variables .env
-load_dotenv()
+# load_dotenv()
 
-# Raíz del proyecto
 BASE_PATH = os.path.dirname(os.path.abspath(__file__))  
 
-# Rutas archivos/carpetas
 FILES_CONVERTED_DIR = os.path.join(BASE_PATH, 'files_converted')
 FILES_GENERATED_DIR = os.path.join(BASE_PATH, 'files_generated')
 MODEL_PATH = os.path.join(BASE_PATH, 'models', 'model_files', '160_model.pth')
 GLYPHS_CONFIG_PATH = os.path.join(BASE_PATH, 'data_configs', 'glyphs.yaml')
 
-# Cargar configuraciones desde el archivo YAML
 try:
 	with open(GLYPHS_CONFIG_PATH, 'r') as file:
 		data_configs = yaml.safe_load(file)
@@ -64,5 +60,4 @@ def get_db_connection():
 	except Error as e:
 		raise RuntimeError(f"Database connection failed: {e}")
 
-# Cargar modelo
 model = load_model()

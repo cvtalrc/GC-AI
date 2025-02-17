@@ -8,25 +8,24 @@ from app.config import THRESHOLD, CLASSES, DEVICE
 #python3 inference.py --weights best_model.pth --input test_data --threshold 0.9
 
 COLOR_MAP = {
-    '__background__': (255, 255, 255),  # Blanco brillante
-    'aptamer': (255, 189, 98),  # Azul celeste suave
-    'cds': (223, 103, 160),  # Morado claro suave
-    'cds-arrow': (150, 193, 85),  # Verde pasto suave
-    'engineered-region': (16, 137, 214),  # Amarillo pasto suave
-    'inert-dna-spacer': (101, 173, 229),  # Naranja suave
-    'ncrna': (213, 108, 178),  # Púrpura suave
-    'operator': (226, 173, 77),  # Azul océano suave
-    'origin-of-replication': (108, 144, 179),  # Café suave
-    'origin-of-transfer': (179, 196, 255),  # Rosa coral suave
-    'polyA': (224, 162, 239),  # Rosa fucsia suave
-    'primer-binding-site': (120, 193, 130),  # Verde hierba suave
-    'promoter': (99, 180, 40),  # Verde pasto vibrante
-    'ribosome-entry-site': (255, 163, 102),  # Azul claro similar al verde
-    'terminator': (94, 99, 255),  # Rojo suave similar al verde
+    '__background__': (255, 255, 255),  
+    'aptamer': (255, 189, 98),  
+    'cds': (223, 103, 160),  
+    'cds-arrow': (150, 193, 85),  
+    'engineered-region': (16, 137, 214),  
+    'inert-dna-spacer': (101, 173, 229), 
+    'ncrna': (213, 108, 178), 
+    'operator': (226, 173, 77), 
+    'origin-of-replication': (108, 144, 179),  
+    'origin-of-transfer': (179, 196, 255), 
+    'polyA': (224, 162, 239),  
+    'primer-binding-site': (120, 193, 130), 
+    'promoter': (99, 180, 40), 
+    'ribosome-entry-site': (255, 163, 102),  
+    'terminator': (94, 99, 255),
 }
 
 def infer_transforms(image):
-    # Define the torchvision image transforms.
     transform = transforms.Compose([
         transforms.ToPILImage(),
         transforms.ToTensor(),
@@ -51,12 +50,12 @@ def calculate_iou(box1, box2):
     x2 = min(box1[2], box2[2])
     y2 = min(box1[3], box2[3])
 
-    # Área de la intersección
+
     intersection = max(0, x2 - x1) * max(0, y2 - y1)
-    # Áreas de las cajas individuales
+
     area_box1 = (box1[2] - box1[0]) * (box1[3] - box1[1])
     area_box2 = (box2[2] - box2[0]) * (box2[3] - box2[1])
-    # Unión
+
     union = area_box1 + area_box2 - intersection
 
     return intersection / union if union > 0 else 0
@@ -79,7 +78,6 @@ def filter_predictions_with_highest_score(outputs, detection_threshold, iou_thre
     scores = outputs[0]['scores'].data.numpy()
     labels = outputs[0]['labels'].cpu().numpy()
 
-    # Filtrar por umbral de detección
     valid_indices = scores >= detection_threshold
     boxes = boxes[valid_indices]
     scores = scores[valid_indices]
@@ -88,13 +86,11 @@ def filter_predictions_with_highest_score(outputs, detection_threshold, iou_thre
     if len(boxes) == 0:
         return [], [], []
 
-    # Ordenar por puntuación descendente
     sorted_indices = np.argsort(-scores)
     boxes = boxes[sorted_indices]
     scores = scores[sorted_indices]
     labels = labels[sorted_indices]
 
-    # Filtrar cajas solapadas
     selected_indices = []
     for i in range(len(boxes)):
         keep = True

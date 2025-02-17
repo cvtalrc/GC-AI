@@ -456,7 +456,7 @@ Contact info for this part: &lt;a href="mailto:(bchow@media.mit.edu)"&gt;Brian C
     <sbol:name>LuxR</sbol:name>
     <rdf:type rdf:resource="http://sbols.org/v3#ExternallyDefined"/>
     <sbol:type rdf:resource="https://identifiers.org/SBO:0000252"/>
-    <sbol:definition rdf:resource="https://www.uniprot.org/uniprotkb/P12746/entry/"/>
+    <sbol:definition rdf:resource="https://www.uniprot.org/uniprotkb/P12746/entry"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://parts.igem.org/BBa_I13263_system/Constraint6">
     <sbol:displayId>Constraint6</sbol:displayId>
@@ -635,7 +635,7 @@ Contact info for this part: &lt;a href="mailto:(bchow@media.mit.edu)"&gt;Brian C
     <sbol:name>GFP</sbol:name>
     <rdf:type rdf:resource="http://sbols.org/v3#ExternallyDefined"/>
     <sbol:type rdf:resource="https://identifiers.org/SBO:0000252"/>
-    <sbol:definition rdf:resource="https://www.uniprot.org/uniprotkb/P42212/entry/"/>
+    <sbol:definition rdf:resource="https://www.uniprot.org/uniprotkb/P42212/entry"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://parts.igem.org/BBa_I13263_system/ComponentReference7">
     <sbol:displayId>ComponentReference7</sbol:displayId>
@@ -648,7 +648,7 @@ Contact info for this part: &lt;a href="mailto:(bchow@media.mit.edu)"&gt;Brian C
     <sbol:name>AHL</sbol:name>
     <rdf:type rdf:resource="http://sbols.org/v3#ExternallyDefined"/>
     <sbol:type rdf:resource="https://identifiers.org/SBO:0000247"/>
-    <sbol:definition rdf:resource="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:55474/"/>
+    <sbol:definition rdf:resource="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:55474"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://parts.igem.org/BBa_I13263_system/Interaction2/Participation1">
     <sbol:displayId>Participation1</sbol:displayId>

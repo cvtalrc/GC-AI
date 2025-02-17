@@ -45,7 +45,7 @@ def cleanup_files():
 		FILES_CONVERTED_DIR
 	]
 	
-	max_age_in_hours = 24  # Adjust retention time
+	max_age_in_hours = 24 
 	logger.info(f"Starting cleanup for folders: {folder_paths}")
 	empty_folders(folder_paths, max_age_in_hours)
 	logger.info("Cleanup completed for all folders.")
@@ -59,7 +59,7 @@ def start_cleanup_schedule():
 	def run_schedule():
 		while True:
 			schedule.run_pending()
-			time.sleep(60)  # Wait one minute between schedule checks
+			time.sleep(60) 
 
 	cleanup_thread = Thread(target=run_schedule, daemon=True)
 	cleanup_thread.start()

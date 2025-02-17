@@ -381,7 +381,7 @@ export default function Home() {
               <Box>
                 {isButtonVisible && (
                   <Button variant="contained" color="primary" onClick={handleOpenDialog} startIcon={<NoteAddIcon />} sx={{ mt: 2.5, p: 1 }} fullWidth>
-                    Create SBOL3.1 File
+                    Create SBOL 3.1 File
                   </Button>
                 )}
               </Box>

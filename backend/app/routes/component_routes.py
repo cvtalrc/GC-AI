@@ -8,11 +8,10 @@ import logging
 logger = logging.getLogger(__name__)
 logger.propagate = True
 
-load_dotenv()
+#load_dotenv()
 
 DB_NAME = os.getenv('DB_NAME')
 
-# Crear un blueprint para las rutas de componentes
 component_blueprint = Blueprint('component', __name__)
 
 @component_blueprint.route('/names', methods=['GET'])

@@ -16,7 +16,6 @@ import logging
 logger = logging.getLogger(__name__)
 logger.propagate = True
 
-# Blueprint para las rutas relacionadas con archivos
 file_blueprint = Blueprint('file', __name__)
 
 @file_blueprint.route('/create', methods=['POST'])
@@ -51,7 +50,6 @@ def create_file():
     finally:
       connection.close()
 
-    # Validate SBOL3 document
     doc3 = sbol3.Document()
     try:
       doc3.read(file_path_full)

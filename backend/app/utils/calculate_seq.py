@@ -28,7 +28,6 @@ def calculate_seq_with_scars(parent_component, components):
       subseq = find_top_level(subc.sequences[0])
       assert sequence.encoding == subseq.encoding
 
-      # Add BioBrick scar if this is not the first subcomponent
       if i > 0:
         next_sequence = subseq.elements
         scar = add_biobrick_scar(next_sequence)
@@ -39,7 +38,6 @@ def calculate_seq_with_scars(parent_component, components):
       end_position = len(sequence.elements)
       subcomponent.locations.append(sbol3.Range(sequence, start_position, end_position))
 
-  # when all have been handled, the sequence is fully realized
   parent_component.document.add(sequence)
   parent_component.sequences.append(sequence)
   return sequence

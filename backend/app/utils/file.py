@@ -8,7 +8,7 @@ import os
 import logging
 from dotenv import load_dotenv
 
-load_dotenv()
+#load_dotenv()
 
 DB_NAME = os.getenv('DB_NAME')
 
@@ -301,8 +301,7 @@ def find_component_reference(system, parent_component, component_name):
             if sub_feature.name == component_name:
                 logger.info(f"Found matching component reference: {feature} points to subcomponent {sub_feature} in system {system.display_id}")
                 return feature
-
-      # Caso para componentes definidos externamente
+              
       elif isinstance(feature, sbol3.ExternallyDefined): 
         if (feature.name == component_name):
           logger.info(f"Found matching ExternallyDefined component: {feature.name} in system {system.display_id}")
@@ -365,7 +364,7 @@ def create_interactions(data_interactions, system, parent_component):
       'Inhibited': sbol3.SBO_INHIBITED,
       'Stimulator': sbol3.SBO_STIMULATOR,
       'Stimulated': sbol3.SBO_STIMULATED,
-      'Reactant': sbol3.SBO_REACTANT,  # Non-Covalent Binding, Degradation, Biochemical Reaction
+      'Reactant': sbol3.SBO_REACTANT,  
       'Product': sbol3.SBO_PRODUCT,
       'Modifier': sbol3.SBO_MODIFIER,
       'Modified': sbol3.SBO_MODIFIED,
@@ -402,7 +401,6 @@ def create_interactions(data_interactions, system, parent_component):
 
           participant_uris[participant_obj] = URI_role
           
-      # Si hay participantes válidos, se añade la interacción
       if participant_uris:
         add_interaction(URI_interaction, participant_uris, system)
         logger.info(f"Interaction added with participants: {participant_uris}")
