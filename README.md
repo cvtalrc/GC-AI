@@ -110,7 +110,8 @@ For a detailed API reference, user guide, and additional resources, visit the `d
 - 📖 **API Documentation:** Detailed explanations of each endpoint, including parameters, request examples, and responses.
 - 📝 **User Guide:** Step-by-step instructions on how to use the application.
 - 📁 **Examples Folder:** Contains example files and use cases to better understand the functionality.
-- 🎥 **Video Tutorial:** A video walkthrough demonstrating the application's workflow and features.
+
+🎥 **Video Tutorial:** https://drive.google.com/file/d/1HaAMEEK1RPH6OgdfUJZEpdy9fs_9gR0N/view?usp=sharing.
 
 ## 📝 License
 
