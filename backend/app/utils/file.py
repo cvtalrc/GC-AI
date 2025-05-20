@@ -415,45 +415,69 @@ def create_interactions(data_interactions, system, parent_component):
   
 def create_ed_components(ed_data, system):
   """
-    Adds externally defined components to the system.
+  Adds externally defined components to the system.
+  If the component type is 'Protein', it adds the 'transcription factor' role.
 
-    Args:
-      ed_data: List of externally defined component data.
-      system: The system to add the components to.
-    
-    Returns:
-      list: List of the created externally defined components.
+  Args:
+    ed_data: List of externally defined component data.
+             Each dict in the list should have 'type', 'uri', and 'name'.
+    system: The sbol3.Component to add the features to.
+  
+  Returns:
+    list: List of the created sbol3.ExternallyDefined feature components.
   """
   
-  try: 
+  try:
     ed_mapping = {
       'Simple Chemical': sbol3.SBO_SIMPLE_CHEMICAL,
       'Protein': sbol3.SBO_PROTEIN,
       'Restriction Enzyme': sbol3.SBO_PROTEIN
     }
 
+    TRANSCRIPTION_FACTOR_ROLE = 'http://identifiers.org/GO:0003700'
     ed_components = []
 
     for data in ed_data:
-      ed_type = data.get('type')
-      ed_uri = data.get('uri', "")
-      ed_name = data.get('name')
+      ed_type_str = data.get('type') 
+      ed_uri = data.get('uri', "")    
+      ed_name = data.get('name') 
 
-      if ed_type not in ed_mapping:
-        error_message = f"Unsupported externally defined component type: {ed_type}"
+      if not ed_type_str or not ed_uri or not ed_name:
+        error_message = f"Missing data for externally defined component: {data}"
         logger.error(error_message)
         raise CustomError(error_message, status_code=400)
 
-      c_type = ed_mapping[ed_type]
-      ed_component = add_feature(system, sbol3.ExternallyDefined([c_type], definition=ed_uri, name=ed_name))
-      ed_components.append(ed_component)
-      logger.info(f"Created externally defined component - Name: {ed_name}")
+      if ed_type_str not in ed_mapping:
+        error_message = f"Unsupported externally defined component type: {ed_type_str}"
+        logger.error(error_message)
+        raise CustomError(error_message, status_code=400)
+
+      sbol_component_type_iri = ed_mapping[ed_type_str]
+      feature_sbol_types = [sbol_component_type_iri]
+      feature_roles = []
+
+      if ed_type_str == 'Protein':
+        feature_roles.append(TRANSCRIPTION_FACTOR_ROLE)
+
+      if feature_roles:
+        ed_feature = sbol3.ExternallyDefined(types=feature_sbol_types, 
+                                             definition=ed_uri, 
+                                             name=ed_name, 
+                                             role=feature_roles)
+      else:
+        ed_feature = sbol3.ExternallyDefined(types=feature_sbol_types, 
+                                             definition=ed_uri, 
+                                             name=ed_name)
+      
+      added_feature = add_feature(system, ed_feature)
+      ed_components.append(added_feature)
+      logger.info(f"Created externally defined feature - Name: {ed_name}, Type: {ed_type_str}, Roles: {feature_roles}")
 
     return ed_components
 
   except Exception as e:
-    error_message = f"Error creating externally defined components for system '{system.display_id}': {e}"
-    logger.error(error_message)
+    error_message = f"An unexpected error occurred while creating externally defined components: {str(e)}"
+    logger.error(error_message, exc_info=True) 
     raise CustomError(error_message, status_code=500)
 
 def create_file_sol3(cursor, data_front, include_functional):
