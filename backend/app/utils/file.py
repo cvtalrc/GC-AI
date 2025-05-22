@@ -459,17 +459,16 @@ def create_ed_components(ed_data, system):
       if ed_type_str == 'Protein':
         feature_roles.append(TRANSCRIPTION_FACTOR_ROLE)
 
-      if feature_roles:
-        ed_feature = sbol3.ExternallyDefined(types=feature_sbol_types, 
-                                             definition=ed_uri, 
-                                             name=ed_name, 
-                                             role=feature_roles)
-      else:
-        ed_feature = sbol3.ExternallyDefined(types=feature_sbol_types, 
+
+      ed_feature = sbol3.ExternallyDefined(types=feature_sbol_types, 
                                              definition=ed_uri, 
                                              name=ed_name)
       
       added_feature = add_feature(system, ed_feature)
+      
+      if feature_roles:
+        added_feature.roles = feature_roles
+        
       ed_components.append(added_feature)
       logger.info(f"Created externally defined feature - Name: {ed_name}, Type: {ed_type_str}, Roles: {feature_roles}")
 
