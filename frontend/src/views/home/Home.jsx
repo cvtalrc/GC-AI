@@ -47,6 +47,8 @@ export default function Home() {
   const [participantRoles, setParticipantRoles] = useState({});
   const [hasPredictions, setHasPredictions] = useState(false);
 
+  const [predictionName, setPredictionName] = useState(null);
+
   const [modalConfig, setModalConfig] = useState({ open: false, title: "", message: "", type: "info" });
 
   useEffect(() => {
@@ -191,7 +193,7 @@ export default function Home() {
         const url = window.URL.createObjectURL(blob);
         const link = document.createElement('a');
         link.href = url;
-        link.setAttribute('download', 'result.xml');
+        link.setAttribute('download', prediction[0].name);
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
@@ -208,6 +210,7 @@ export default function Home() {
       setLoading(null);
       showModal("Error", "Database connection error. Please try again later.", "error");
     } finally {
+      setPredictionName(prediction[0].name)
       setPrediction(null);
       setNamespace("");
       setExpressions([]);
@@ -257,17 +260,28 @@ export default function Home() {
         try {
           const zip = await JSZip.loadAsync(blob);
           const files = Object.keys(zip.files);
-
+        
+          const newFastaName = `${predictionName}.fasta`; 
+          const newGbName = `${predictionName}.gb`;
+        
           for (const filename of files) {
             const fileData = await zip.files[filename].async('blob');
             const url = window.URL.createObjectURL(fileData);
             const link = document.createElement('a');
             link.href = url;
-            link.setAttribute('download', filename);
+        
+            if (filename.endsWith('.fasta')) {
+              link.setAttribute('download', newFastaName);
+            } else if (filename.endsWith('.gb')) {
+              link.setAttribute('download', newGbName);
+            } else {
+              link.setAttribute('download', filename); 
+            }
+        
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
-
+        
             setLoading(null);
             showModal("Success", "File converted successfully!", "success");
           }
@@ -283,6 +297,7 @@ export default function Home() {
       setLoading(null);
       showModal("Error", "Database connection error. Please try again later.", "error");
     } finally {
+      setPredictionName(null);
       setPrediction(null);
       setNamespace("");
       setExpressions([]);

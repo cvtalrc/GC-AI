@@ -34,16 +34,24 @@ const ConversionDialog = ({ open, handleClose, handleConvert }) => {
       </DialogTitle>
       </Box>
       <DialogContent>
-        <DialogContentText id="conversion-dialog-description">
+        <DialogContentText id="conversion-dialog-description" sx={{mb:2}}>
           The SBOL 3.1 file has been successfully downloaded. Would you like to convert this file into another format? You can select multiple options.
         </DialogContentText>
         <FormGroup>
           <FormControlLabel
-            control={<Checkbox checked={selectedFormats.fasta} onChange={handleCheckboxChange} name="fasta" />}
+            control={<Checkbox checked={selectedFormats.fasta} onChange={handleCheckboxChange} name="fasta" sx={{
+              '& .MuiSvgIcon-root': {
+                color: 'primary.main'
+              }
+            }} />}
             label="Convert to FASTA"
           />
           <FormControlLabel
-            control={<Checkbox checked={selectedFormats.genbank} onChange={handleCheckboxChange} name="genbank" />}
+            control={<Checkbox checked={selectedFormats.genbank} onChange={handleCheckboxChange} name="genbank" sx={{
+              '& .MuiSvgIcon-root': {
+                color: 'primary.main'
+              }
+            }}/>}
             label="Convert to GENBANK"
           />
         </FormGroup>

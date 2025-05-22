@@ -10,6 +10,11 @@ const Constitutive = ({ constitutive, onConstitutiveChange }) => {
           checked={constitutive}
           onChange={(event) => onConstitutiveChange(event.target.checked)}
           size='small'
+          sx={{
+            '& .MuiSvgIcon-root': {
+              color: 'primary.main'
+            }
+          }}
         />
       }
       label="Constitutive"

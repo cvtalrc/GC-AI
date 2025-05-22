@@ -1,4 +1,4 @@
-/* eslint-disable react/prop-types */
+ /* eslint-disable react/prop-types */
 import { Box, TextField, Typography } from '@mui/material';
 
 export default function NamespaceInput({ namespace, setNamespace, error, helperText }) {
