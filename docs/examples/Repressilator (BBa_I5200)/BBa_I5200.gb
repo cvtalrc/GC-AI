@@ -1,4 +1,4 @@
-LOCUS       BBa_I5200               3174 bp    DNA     linear   UNK 01-JAN-1980
+LOCUS       BBa_I5200               4120 bp    DNA     linear   UNK 01-JAN-1980
 DEFINITION  Olmecs: Repressilator version 1 (HK022 cI).
 ACCESSION   BBa_I5200
 VERSION     BBa_I5200
@@ -19,8 +19,18 @@ FEATURES             Location/Qualifiers
                      /label="BBa_B0012_3"
      misc_feature    3129..3174
                      /label="BBa_B0011_3"
+     misc_feature    3183..3237
+                     /label="BBa_R0011_2"
+     misc_feature    3246..3257
+                     /label="BBa_B0034_4"
+     misc_feature    3264..3983
+                     /label="BBa_E0040_1"
+     misc_feature    3992..4071
+                     /label="BBa_B0010_1"
      misc_feature    1..55
                      /label="BBa_R0011_1"
+     misc_feature    4080..4120
+                     /label="BBa_B0012_4"
      misc_feature    64..75
                      /label="BBa_B0034_1"
      misc_feature    82..766
@@ -90,5 +100,21 @@ ORIGIN
      2941 tccccgcgcg ttggccgatt cattaatgca gctggcacga caggtttccc gactggaaag
      3001 cgggcaggct gcaaacgacg aaaactacgc tttagtagct taataactct gatagtgcta
      3061 gtgtagatct ctactagagt cacactggct caccttcggg tgggcctttc tgcgtttata
-     3121 tactagagag agaatataaa aagccagatt attaatccgg cttttttatt attt
+     3121 tactagagag agaatataaa aagccagatt attaatccgg cttttttatt attttactag
+     3181 agaattgtga gcggataaca attgacattg tgagcggata acaagatact gagcacatac
+     3241 tagagaaaga ggagaaatac tagatgcgta aaggagaaga acttttcact ggagttgtcc
+     3301 caattcttgt tgaattagat ggtgatgtta atgggcacaa attttctgtc agtggagagg
+     3361 gtgaaggtga tgcaacatac ggaaaactta cccttaaatt tatttgcact actggaaaac
+     3421 tacctgttcc atggccaaca cttgtcacta ctttcggtta tggtgttcaa tgctttgcga
+     3481 gatacccaga tcatatgaaa cagcatgact ttttcaagag tgccatgccc gaaggttatg
+     3541 tacaggaaag aactatattt ttcaaagatg acgggaacta caagacacgt gctgaagtca
+     3601 agtttgaagg tgataccctt gttaatagaa tcgagttaaa aggtattgat tttaaagaag
+     3661 atggaaacat tcttggacac aaattggaat acaactataa ctcacacaat gtatacatca
+     3721 tggcagacaa acaaaagaat ggaatcaaag ttaacttcaa aattagacac aacattgaag
+     3781 atggaagcgt tcaactagca gaccattatc aacaaaatac tccaattggc gatggccctg
+     3841 tccttttacc agacaaccat tacctgtcca cacaatctgc cctttcgaaa gatcccaacg
+     3901 aaaagagaga ccacatggtc cttcttgagt ttgtaacagc tgctgggatt acacatggca
+     3961 tggatgaact atacaaataa taatactaga gccaggcatc aaataaaacg aaaggctcag
+     4021 tcgaaagact gggcctttcg ttttatctgt tgtttgtcgg tgaacgctct ctactagagt
+     4081 cacactggct caccttcggg tgggcctttc tgcgtttata
 //

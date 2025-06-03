@@ -1,4 +1,4 @@
-LOCUS       BBa_I13263              2044 bp    DNA     linear   UNK 01-JAN-1980
+LOCUS       BBa_I13263              2041 bp    DNA     linear   UNK 01-JAN-1980
 DEFINITION  Lux Receiver (HSL & R0063 driven).
 ACCESSION   BBa_I13263
 VERSION     BBa_I13263
@@ -7,7 +7,7 @@ SOURCE      .
   ORGANISM  .
             .
 FEATURES             Location/Qualifiers
-     misc_feature    2004..2044
+     misc_feature    2001..2041
                      /label="BBa_B0012_2"
      misc_feature    1..151
                      /label="BBa_R0063_1"
@@ -23,9 +23,9 @@ FEATURES             Location/Qualifiers
                      /label="BBa_R0062_1"
      misc_feature    1167..1178
                      /label="BBa_B0034_2"
-     misc_feature    1185..1907
-                     /label="BBa_E0030_1"
-     misc_feature    1916..1995
+     misc_feature    1185..1904
+                     /label="BBa_E0040_1"
+     misc_feature    1913..1992
                      /label="BBa_B0010_2"
 ORIGIN
         1 acctgtacga tcctacaggt gcttatgtta agtaattgta ttcccagcga tacaatagtg
@@ -47,20 +47,20 @@ ORIGIN
       961 ctagagccag gcatcaaata aaacgaaagg ctcagtcgaa agactgggcc tttcgtttta
      1021 tctgttgttt gtcggtgaac gctctctact agagtcacac tggctcacct tcgggtgggc
      1081 ctttctgcgt ttatatacta gagacctgta ggatcgtaca ggtttacgca agaaaatggt
-     1141 ttgttatagt cgaataaata ctagagaaag aggagaaata ctagatggtg agcaagggcg
-     1201 aggagctgtt caccggggtg gtgcccatcc tggtcgagct ggacggcgac gtaaacggcc
-     1261 acaagttcag cgtgtccggc gagggcgagg gcgatgccac ctacggcaag ctgaccctga
-     1321 agttcatctg caccaccggc aagctgcccg tgccctggcc caccctcgtg accaccttcg
-     1381 gctacggcct gcaatgcttc gcccgctacc ccgaccacat gaagctgcac gacttcttca
-     1441 agtccgccat gcccgaaggc tacgtccagg agcgcaccat cttcttcaag gacgacggca
-     1501 actacaagac ccgcgccgag gtgaagttcg agggcgacac cctggtgaac cgcatcgagc
-     1561 tgaagggcat cgacttcaag gaggacggca acatcctggg gcacaagctg gagtacaact
-     1621 acaacagcca caacgtctat atcatggccg acaagcagaa gaacggcatc aaggtgaact
-     1681 tcaagatccg ccacaacatc gaggacggca gcgtgcagct cgccgaccac taccagcaga
-     1741 acacccccat cggcgacggc cccgtgctgc tgcccgacaa ccactacctg agctaccagt
-     1801 ccgccctgag caaagacccc aacgagaagc gcgatcacat ggtcctgctg gagttcgtga
-     1861 ccgccgccgg gatcactctc ggcatggacg agctgtacaa gtaataatac tagagccagg
-     1921 catcaaataa aacgaaaggc tcagtcgaaa gactgggcct ttcgttttat ctgttgtttg
-     1981 tcggtgaacg ctctctacta gagtcacact ggctcacctt cgggtgggcc tttctgcgtt
-     2041 tata
+     1141 ttgttatagt cgaataaata ctagagaaag aggagaaata ctagatgcgt aaaggagaag
+     1201 aacttttcac tggagttgtc ccaattcttg ttgaattaga tggtgatgtt aatgggcaca
+     1261 aattttctgt cagtggagag ggtgaaggtg atgcaacata cggaaaactt acccttaaat
+     1321 ttatttgcac tactggaaaa ctacctgttc catggccaac acttgtcact actttcggtt
+     1381 atggtgttca atgctttgcg agatacccag atcatatgaa acagcatgac tttttcaaga
+     1441 gtgccatgcc cgaaggttat gtacaggaaa gaactatatt tttcaaagat gacgggaact
+     1501 acaagacacg tgctgaagtc aagtttgaag gtgataccct tgttaataga atcgagttaa
+     1561 aaggtattga ttttaaagaa gatggaaaca ttcttggaca caaattggaa tacaactata
+     1621 actcacacaa tgtatacatc atggcagaca aacaaaagaa tggaatcaaa gttaacttca
+     1681 aaattagaca caacattgaa gatggaagcg ttcaactagc agaccattat caacaaaata
+     1741 ctccaattgg cgatggccct gtccttttac cagacaacca ttacctgtcc acacaatctg
+     1801 ccctttcgaa agatcccaac gaaaagagag accacatggt ccttcttgag tttgtaacag
+     1861 ctgctgggat tacacatggc atggatgaac tatacaaata ataatactag agccaggcat
+     1921 caaataaaac gaaaggctca gtcgaaagac tgggcctttc gttttatctg ttgtttgtcg
+     1981 gtgaacgctc tctactagag tcacactggc tcaccttcgg gtgggccttt ctgcgtttat
+     2041 a
 //
