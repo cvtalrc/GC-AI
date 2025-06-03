@@ -113,7 +113,7 @@ For a detailed API reference, user guide, and additional resources, visit the `d
 -  **User Guide:** Step-by-step instructions on how to use the application.
 -  **Examples Folder:** Contains example files and use cases to better understand the functionality.
 
- **Video Tutorial:** [https://drive.google.com/file/d/1HaAMEEK1RPH6OgdfUJZEpdy9fs_9gR0N/view?usp=sharing.](https://drive.google.com/file/d/1arsPDjiq3L0xUiLrLLDwt6Qws6lDpU9x/view?usp=sharing)
+[**Video Tutorial**](https://drive.google.com/file/d/1RuKLGXI1q8kWlBau8AR73cHA5y5vItGI/view?usp=sharing)
 
 ## 📝 License
 
