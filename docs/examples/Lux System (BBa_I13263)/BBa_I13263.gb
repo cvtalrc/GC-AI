@@ -1,0 +1,66 @@
+LOCUS       BBa_I13263              2044 bp    DNA     linear   UNK 01-JAN-1980
+DEFINITION  Lux Receiver (HSL & R0063 driven).
+ACCESSION   BBa_I13263
+VERSION     BBa_I13263
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+     misc_feature    2004..2044
+                     /label="BBa_B0012_2"
+     misc_feature    1..151
+                     /label="BBa_R0063_1"
+     misc_feature    160..171
+                     /label="BBa_B0034_1"
+     misc_feature    178..958
+                     /label="BBa_C0062_1"
+     misc_feature    967..1046
+                     /label="BBa_B0010_1"
+     misc_feature    1055..1095
+                     /label="BBa_B0012_1"
+     misc_feature    1104..1158
+                     /label="BBa_R0062_1"
+     misc_feature    1167..1178
+                     /label="BBa_B0034_2"
+     misc_feature    1185..1907
+                     /label="BBa_E0030_1"
+     misc_feature    1916..1995
+                     /label="BBa_B0010_2"
+ORIGIN
+        1 acctgtacga tcctacaggt gcttatgtta agtaattgta ttcccagcga tacaatagtg
+       61 tgacaaaaat ccaatttatt agaatcaaat gtcaatccat taccgtttta atgatatata
+      121 acacgcaaaa cttgcgacaa acaataggta atactagaga aagaggagaa atactagatg
+      181 aaaaacataa atgccgacga cacatacaga ataattaata aaattaaagc ttgtagaagc
+      241 aataatgata ttaatcaatg cttatctgat atgactaaaa tggtacattg tgaatattat
+      301 ttactcgcga tcatttatcc tcattctatg gttaaatctg atatttcaat cctagataat
+      361 taccctaaaa aatggaggca atattatgat gacgctaatt taataaaata tgatcctata
+      421 gtagattatt ctaactccaa tcattcacca attaattgga atatatttga aaacaatgct
+      481 gtaaataaaa aatctccaaa tgtaattaaa gaagcgaaaa catcaggtct tatcactggg
+      541 tttagtttcc ctattcatac ggctaacaat ggcttcggaa tgcttagttt tgcacattca
+      601 gaaaaagaca actatataga tagtttattt ttacatgcgt gtatgaacat accattaatt
+      661 gttccttctc tagttgataa ttatcgaaaa ataaatatag caaataataa atcaaacaac
+      721 gatttaacca aaagagaaaa agaatgttta gcgtgggcat gcgaaggaaa aagctcttgg
+      781 gatatttcaa aaatattagg ttgcagtgag cgtactgtca ctttccattt aaccaatgcg
+      841 caaatgaaac tcaatacaac aaaccgctgc caaagtattt ctaaagcaat tttaacagga
+      901 gcaattgatt gcccatactt taaaaattaa taacactgat agtgctagtg tagatcacta
+      961 ctagagccag gcatcaaata aaacgaaagg ctcagtcgaa agactgggcc tttcgtttta
+     1021 tctgttgttt gtcggtgaac gctctctact agagtcacac tggctcacct tcgggtgggc
+     1081 ctttctgcgt ttatatacta gagacctgta ggatcgtaca ggtttacgca agaaaatggt
+     1141 ttgttatagt cgaataaata ctagagaaag aggagaaata ctagatggtg agcaagggcg
+     1201 aggagctgtt caccggggtg gtgcccatcc tggtcgagct ggacggcgac gtaaacggcc
+     1261 acaagttcag cgtgtccggc gagggcgagg gcgatgccac ctacggcaag ctgaccctga
+     1321 agttcatctg caccaccggc aagctgcccg tgccctggcc caccctcgtg accaccttcg
+     1381 gctacggcct gcaatgcttc gcccgctacc ccgaccacat gaagctgcac gacttcttca
+     1441 agtccgccat gcccgaaggc tacgtccagg agcgcaccat cttcttcaag gacgacggca
+     1501 actacaagac ccgcgccgag gtgaagttcg agggcgacac cctggtgaac cgcatcgagc
+     1561 tgaagggcat cgacttcaag gaggacggca acatcctggg gcacaagctg gagtacaact
+     1621 acaacagcca caacgtctat atcatggccg acaagcagaa gaacggcatc aaggtgaact
+     1681 tcaagatccg ccacaacatc gaggacggca gcgtgcagct cgccgaccac taccagcaga
+     1741 acacccccat cggcgacggc cccgtgctgc tgcccgacaa ccactacctg agctaccagt
+     1801 ccgccctgag caaagacccc aacgagaagc gcgatcacat ggtcctgctg gagttcgtga
+     1861 ccgccgccgg gatcactctc ggcatggacg agctgtacaa gtaataatac tagagccagg
+     1921 catcaaataa aacgaaaggc tcagtcgaaa gactgggcct ttcgttttat ctgttgtttg
+     1981 tcggtgaacg ctctctacta gagtcacact ggctcacctt cgggtgggcc tttctgcgtt
+     2041 tata
+//
