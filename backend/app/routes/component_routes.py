@@ -85,11 +85,11 @@ def get_participations():
     participation_map = {
       'Inhibition': ['Inhibitor', 'Inhibited'],
       'Stimulation': ['Stimulator', 'Stimulated'],
-      'Biochemical Reaction': ['Reactant', 'Product', 'Modifier', 'Modified'],
+      'Biochemical Reaction': ['Reactant', 'Modifier',  'Product'],
       'Non-Covalent Binding': ['Reactant', 'Product'],
       'Degradation': ['Reactant'],
       'Control': ['Modifier', 'Modified'],
-      'Genetic Production': ['Product', 'Promoter', 'Template']
+      'Genetic Production': ['Promoter', 'Template', 'Product']
     }
 
     participations = participation_map.get(interaction_type)
