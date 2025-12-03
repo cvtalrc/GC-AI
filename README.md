@@ -26,6 +26,15 @@
 - **Database Integration**: Interacts with a MySQL database to retrieve and store relevant data.
 
 ---
+## 🧩 System Architecture
+
+The following diagram illustrates the complete workflow of GC-AI, from the initial image input and AI detection to the generation of standardized SBOL3 files and optional conversions:
+
+<p align="center">
+  <img src="docs/Diagrama_flujo_GC-AI.png" alt="GC-AI Architecture Flow" width="100%">
+</p>
+
+---
 
 ## ⚙️ Installation 
 
